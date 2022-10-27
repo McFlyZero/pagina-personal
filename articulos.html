@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GameRev</title>
+  <link rel="icon" href="img/GameRev-icon.png">
+  <!-- PLUGINS DE CSS -->
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+
+  <script src="https://kit.fontawesome.com/e34637f33b.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Chewy|Open+Sans" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/plugins/jquery.jdSlider.css">
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"> -->
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- PLUGINS DE JS -->
+
+  <!-- jQuery library -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+  <!-- jQuery con animaciones -->
+  <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+
+  <!-- Popper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script src="js/plugins/jquery.jdSlider-latest.js"></script>
+  <script src="js/plugins/pagination.min.js"></script>
+
+  <!-- Scrollorama -->
+  <script src="js/plugins/jquery.superscrollorama.js"></script>
+  <script src="js/plugins/TweenMax.min.js"></script>
+
+  <!-- Scrollup -->
+  <script src="js/plugins/scrollUP.js"></script>
+  <script src="js/plugins/jquery.easing.js"></script>
+
+  <!--==================================
+  PRELOAD
+  ====================================-->
+  <div id="preload">
+    
+    <div id="porcentajeCarga">0%</div>
+
+    <div id="lineaCarga">
+
+      <div id="rellenoCarga"></div>
+
+    </div>
+
+    <div id="estadoCarga"></div>
+
+  </div>
+  
+</head>
+<!-- ENCABEZADO -->
+<header class="container-fluid">
+  <div class="container p-0">
+    <div class="row"> 
+      <!-- LOGO -->
+      <div class="col-10 col-sm-11 col-md-8 col-lg-7 pt-1 pt-lg-2 px-xl-0">
+
+        <a href="index.html">
+
+          <img src="img/GameRev-icon.png" alt="logo de GameRev" class="img-fluid logotipo">
+
+        </a>
+      </div>
+      <!-- REDES SOCIALES -->
+      <div class="d-none d-md-block col-2 col-lg-3 redes">
+          <!-- Le puse 1 más de padding en top era pt-2 -->
+          <ul class="d-flex justify-content-end pt-3 mt-1">
+
+            <li>
+              <a href="https://www.facebook.com" target="blank">
+                <i class="fa-brands fa-facebook-f lead float-left rounded-circle text-white mr-1"></i>
+              </a>
+            </li>
+
+            <li>
+              <a href="https://www.instagram.com" target="blank">
+                <i class="fa-brands fa-instagram lead float-left rounded-circle text-white mr-1"> </i>
+              </a>
+            </li>
+
+            <li>
+              <a href="https://www.twitter.com" target="blank">
+                <i class="fa-brands fa-twitter lead float-left rounded-circle text-white mr-1">   </i>
+              </a>
+            </li>
+
+            <li>
+              <a href="https://www.youtube.com" target="blank">
+                <i class="fa-brands fa-youtube lead float-left rounded-circle text-white mr-1"> 
+                </i>
+              </a>
+              </li>
+
+            <li>
+              <a href="https://www.snapchat.com" target="blank">
+                <i class="fa-brands fa-snapchat lead float-left rounded-circle text-white mr-1">  </i>
+              </a>
+            </li>
+
+          </ul>
+      </div>
+
+      <!-- BUSCADOR Y BOTON MENÚ -->
+      <div class="col-2 col-sm-1 col-md-2 col-lg-2 d-flex justify-content-end pt-2 mt-1">
+
+        <!-- Buscador -->
+        <div class="d-none d-md-block pr-4 pr-lg-5 mt-3">
+          <i class="fa-solid fa-search lead" data-toggle="collapse" data-target="#buscador"></i>
+        </div>
+
+        <!-- Menu -->
+        <div class="m-0 mt-sm-1 mt-md-0 mt-lg-1 pr-0 pr-sm-2 pr-lg-3 py-2">
+          <i class="fa-solid fa-bars lead"></i>
+      </div>
+
+       </div>
+
+       <!-- ENTRADA DEL BUCADOR -->
+        <div id="buscador" class="collapse col-12">
+          <div class="input-group float-right w-50 pl-xl-5 pb-3">
+            <input type="text" class="form-control" placeholder="Buscar">
+            <div class="input-group-append">
+              <span class="input-group-text">
+                <i class="fa-solid fa-search"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+
+  
+</header>
+
+<body>
+
+<!-- REDES SOCIALES PARA MÓVIL-->
+      <div class="d-block d-md-none redes redesMovil p-0 bg-white w-100 pt-2">
+
+          <ul class="d-flex justify-content-center p-0">
+
+            <li>
+              <a href="https://www.facebook.com" target="blank">
+                <i class="fa-brands fa-facebook-f lead rounded-circle text-white mr-3 mr-sm-4"></i>
+              </a>
+            </li>
+
+            <li>
+              <a href="https://www.instagram.com" target="blank">
+                <i class="fa-brands fa-instagram lead rounded-circle text-white mr-3 mr-sm-4"> </i>
+              </a>
+            </li>
+
+            <li>
+              <a href="https://www.twitter.com" target="blank">
+                <i class="fa-brands fa-twitter lead rounded-circle text-white mr-3 mr-sm-4">   </i>
+              </a>
+            </li>
+
+            <li>
+              <a href="https://www.youtube.com" target="blank">
+                <i class="fa-brands fa-youtube lead rounded-circle text-white mr-3 mr-sm-4"> 
+                </i>
+              </a>
+            </li>
+
+           <li>
+              <a href="https://www.snapchat.com" target="blank">
+                <i class="fa-brands fa-snapchat lead float-left rounded-circle text-white mr-3 mr-sm-2">  </i>
+              </a>
+            </li>
+
+
+          </ul>
+      </div>
+
+      <!--=====================================
+      =                BANNER                 =
+      ======================================-->
+      <div class="bannerEstatico"></div>
+        <section class="jd-slider fade-slider-Banner fade-slider">
+          <div class="slide-inner">
+            <ul class="slide-area">
+              <!-- CAMBIAR LAS IMAGENES DEL BANNER -->
+              <li>
+
+                <div class="d-none d-md-block textoBanner">
+                  <h1>Watch how we work</h1>
+                  <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, ad, laudantium.</h5>
+                </div>
+                <img src="img/banner01.jpg" alt="" class="img-fluid">
+              </li>
+            </ul>
+          </div>
+          <div class="controller d-none">
+            <a class="auto" href="#">
+              <i class="fas fa-play fa-xs"></i>
+              <i class="fas fa-pause fa-xs"></i>
+            </a>
+            <div class="indicate-area"></div>
+          </div>
+        </section>
+      <!-- </div> -->
+
+      <!-- BUSCADOR PARA MÓVIL -->
+
+<div class="container d-block d-md-none py-3 pr-2">
+  <div class="input-group input-group-sm">
+    <input type="text" class="form-control" placeholder="Buscar">
+    <div class="input-group-append">
+      <span class="input-group-text"><i class="fas fa-search"></i></span>
+    </div>
+  </div>
+</div>
+
+<!-- MENU -->
+<div class="container-fluid menu">
+
+  <a href="#" class="btnClose">X</a>
+  <ul class="nav flex-column text-center">
+    <li class="nav-item">
+      <a class="nav-link text-white" href="categorias.html">Noticias de hoy</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link text-white" href="categorias.html">Nuevos lanzamientos</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link text-white" href="categorias.html">Próximos lanzamientos</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link text-white" href="categorias.html">Lo mejor de 2022</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link text-white" href="categorias.html">Lo mejor de todos los tiempos</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link text-white" href="categorias.html">Top videojuegos gratis</a>
+    </li>
+  </ul>
+</div>
+
+<!--=====================================
+CONTENIDO BLOG
+======================================-->
+<div class="container-fluid bg-white contenidoInicio py-2 py-md-4">
+  <div class="container">
+
+    <!-- BREADCRUMB -->
+      <a href="categorias.html">
+        
+        <button class="d-block d-sm-none btn btn-info btn-sm mb-2">
+          
+          REGRESAR
+
+        </button>
+
+      </a>
+
+    <ul class="breadcrumb bg-white p-0 mb-2 mb-md-4 breadArticulo">
+
+      <li class="breadcrumb-item inicio"><a href="index.html">Inicio</a></li>
+      <li class="breadcrumb-item"><a href="categorias.html">Novedades</a></li>
+      <li class="breadcrumb-item active">Persona 5 llega a Xbox</li>
+      
+    </ul>
+
+
+
+    <div class="row">
+      <!-- COLUMNA IZQUIERDA -->
+
+      <div class="col-12 col-md-8 col-lg-9 p-0 pr-lg-5">
+
+        <!-- ARTICULO 01 -->
+        <div class="container">
+
+          <div class="d-flex">
+            
+            <div class="fechaArticulo">22.10.2022</div>
+
+            <h3 class="tituloArticulo text-right text-muted pl-3 pt-lg-2">Persona 5 llega a Xbox</h3>
+
+          </div>
+
+          <img src="img/articulo10.jpg" alt="Lorem ipsum dolor sit amet" class="img-fluid my-lg-3">
+
+          <p class="textoArticulo my-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione unde recusandae voluptates pariatur sapiente nostrum iusto, laudantium facilis, ab harum optio veritatis doloremque dolore aspernatur fuga error delectus. Nesciunt, debitis.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+
+          <!-- PUBLICIDAD -->
+          <img src="img/ad04.png" class="img-fluid my-3" width="100%">
+
+          <p class="textoArticulo my-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione unde recusandae voluptates pariatur sapiente nostrum iusto, laudantium facilis, ab harum optio veritatis doloremque dolore aspernatur fuga error delectus. Nesciunt, debitis.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+
+          <p class="textoArticulo my-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione unde recusandae voluptates pariatur sapiente nostrum iusto, laudantium facilis, ab harum optio veritatis doloremque dolore aspernatur fuga error delectus. Nesciunt, debitis.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+
+          <!-- COMPARTIR EN REDES -->
+          <div class="float-right my-3 btnCompartir">
+
+            <div class="btn-group">
+
+              <button type="button" class="btn border-0 text-white" style="background: #1475E0">
+
+                <span class="fab fa-facebook pr-1"></span>
+
+                Facebook
+
+                <span class="lead pl-1">3</span>
+
+              </button>
+              <button type="button" class="btn border-0 text-white" style="background: #00A6FF">
+
+                <span class="fab fa-twitter pr-1"></span>
+
+                Twitter
+
+                <span class="lead pl-1">3</span>
+
+              </button>
+              <button type="button" class="btn border-0 text-white" style="background: #DD4D41">
+
+                <span class="fab fa-google-plus pr-1"></span>
+
+                Google
+
+                <span class="lead pl-1">3</span>
+
+              </button>
+
+            </div>
+
+          </div>
+
+          <div class="clearfix"></div>
+          <div class="d-flex justify-content-between my-3 d-none d-md-block">
+            
+            <a href="articulos.html">Leer artículo anterior</a>
+
+            <a href="articulos.html">Leer artículo siguiente</a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- COLUMNA DERECHA -->
+
+      <div class="d-none d-md-block pt-md-4 pt-lg-0 col-md-4 col-lg-3">
+
+      <!-- PUBLICIDAD -->
+      <div class="mb-4">
+
+        <img src="img/ad06.png" class="img-fluid">
+
+      </div>
+      <!-- COMENTARIOS RECIENTES -->
+      <div class="my-4">
+
+        <h4>Artículos Relacionados</h4>
+        <!-- COMENTARIO 1 -->
+        <div class="d-flex my-3">
+
+          <div class="w-100 w-xl-50 pr-3 pt-2">
+            <a href="articulos.html">
+              <img src="img/com01.jpg" alt="Lorem ipsum dolor sit" class="img-fluid">
+            </a>
+          </div>
+
+          <div>
+            <a href="articulos.html" class="text-secondary">
+              <p class="small">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+            </a>
+          </div>
+
+        </div>
+
+        <!-- COMENTARIO 2 -->
+        <div class="d-flex my-3">
+
+          <div class="w-100 w-xl-50 pr-3 pt-2">
+            <a href="articulos.html">
+              <img src="img/com02.jpg" alt="Lorem ipsum dolor sit" class="img-fluid">
+            </a>
+          </div>
+
+          <div>
+            <a href="articulos.html" class="text-secondary">
+              <p class="small">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+            </a>
+          </div>
+
+        </div>
+
+        <!-- COMENTARIO 3 -->
+        <div class="d-flex my-3">
+
+          <div class="w-100 w-xl-50 pr-3 pt-2">
+            <a href="articulos.html">
+              <img src="img/com03.jpg" alt="Lorem ipsum dolor sit" class="img-fluid">
+            </a>
+          </div>
+
+          <div>
+            <a href="articulos.html" class="text-secondary">
+              <p class="small">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+            </a>
+          </div>
+
+        </div>
+        
+      </div>
+      <!-- PUBLICIDAD -->
+      <div class="ads my-4">
+        <img src="img/ad07.png" class="img-fluid">
+      </div>
+      <div class="ads my-4">
+        <img src="img/ad08.png" class="img-fluid">
+      </div>
+    </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- FOOTER -->
+<footer class="container-fluid py-5 d-none d-md-block">
+  <div class="container">
+    <div class="row">
+
+      <!-- GRID CATEGORIAS FOOTER -->
+      <div class="col-md-7 col-lg-6">
+        <div class="p-1 px-1 bg-white gridFooter">
+          <div class="container p-0">
+            <div class="d-flex">
+
+              <div class="d-flex flex-column columna1">
+                <figure class="p-2 m-0 photo1" vinculo="categorias.html">
+                  <p class="text-uppercase p-1 p-md-2 p-xl-1 small">Cyberpunk: Edgerunners</p>
+                </figure>
+                <figure class="p-2 m-0 photo2" vinculo="categorias.html">
+                  <p class="text-uppercase p-1 p-md-2 p-xl-1 small">Soul Hackers 2</p>
+                </figure>
+              </div>
+
+              <div class="d-flex flex-column flex-fill columna2">
+                <div class="d-block d-md-flex">
+                  <figure class="p-2 m-0 flex-fill photo3" vinculo="categorias.html">
+                    <p class="text-uppercase p-1 p-md-2 p-xl-1 small">Remakes de la década</p>
+                  </figure>
+                  <figure class="p-2 m-0 flex-fill photo4" vinculo="categorias.html">
+                    <p class="text-uppercase p-1 p-md-2 p-xl-1 small">Próximos lanzamientos</p>
+                  </figure>
+                </div>  
+
+                <figure class="p-2 m-0 photo5" vinculo="categorias.html">
+                  <p class="text-uppercase p-1 p-md-2 p-xl-1 small">DLC de Monster Hunter</p>
+                </figure>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="d-none d-lg-block col-lg-1 col-xl-2"></div>
+      <!-- NEWSLETTER -->
+      <div class="col-md-5 col-lg-5 col-xl-4 pt-5">
+        <h6 class="text-white">Inscríbete en nuestro newsletter:</h6>
+        <div class="input-group my-4">
+            <input type="text" class="form-control" placeholder="Ingresa tu Email">
+
+            <div class="input-group-append">
+              <span class="input-group-text bg-dark text-white">Inscribirse</span>
+            </div>
+
+        </div>
+
+        <!-- REDES SOCIALES PARA MOVIL -->
+        <div class="p-0 w-100 pt-2">
+          <ul class="d-flex justify-content-left pl-0 pt-0">
+            <li>
+              <a href="https://www.facebook.com target=_blank">
+                <i class="fa-brands fa-facebook-f lead text-white mr-3 mr-sm-4"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com" target="blank">
+                <i class="fa-brands fa-instagram lead text-white mr-3 mr-sm-4"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.twitter.com" target="blank">
+                <i class="fa-brands fa-twitter lead text-white mr-3 mr-sm-4"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.youtube.com" target="blank">
+                <i class="fa-brands fa-youtube lead text-white mr-3 mr-sm-4"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.snapchat.com" target="blank">
+                <i class="fa-brands fa-snapchat lead text-white mr-3 mr-sm-4"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script defer src="js/script.js"></script>
+
+</body>
+</html>

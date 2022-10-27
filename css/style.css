@@ -1,0 +1,690 @@
+/*===================================================
+=  ESCRITORIO (XL revisamos en 1366px en adelante)  =
+=====================================================*/
+*{
+    font-family: 'Rokkitt', serif;
+    font-family: 'Chakra Petch', sans-serif;
+} 
+ul,ol{
+    list-style: none;
+}
+a:visited, a:link, a:focus, a:hover, a:active{
+    list-style: none;
+    text-decoration:  none;
+}
+body{
+	background: #002B5B; 
+}
+/*=============================================
+HEADER
+=============================================*/
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    background: rgba(255,255,255,.5);
+}
+header .logotipo{
+    width:12%;
+}
+.redes ul li i{
+    width: 35px;
+    line-height: 35px;
+    text-align: center;
+    cursor: pointer;
+}
+header .redes ul li i{
+    width: 35px;
+    line-height: 35px;
+    text-align: center;
+    cursor: pointer;
+}
+header .buscymenu ul li i{
+    width: 35px;
+    line-height: 35px;
+    text-align: center;
+    cursor: pointer;
+}
+.redesMovil{
+    position: fixed;
+    bottom: -10px;
+    left: 50%;
+    transform: translate(-50%,0%);
+}
+
+.fa-search{
+    color: white;
+}
+.fa-bars{
+    color: white;
+    font-size: 25px;
+}
+.redesMovil{
+    position: fixed;
+    bottom: -10px;
+    left: 50%;
+    z-index: 10;
+    transition: translate(-50%, 0%);
+}
+
+/*===============================
+BANNER
+================================*/
+.fade-slider{
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    left: 0;
+}
+.bannerEstatico{
+    background: rgba(0,0,0,0);
+}
+.fade-slider {
+    height: 90px;
+}
+.fade-slider-Banner{
+    height: 300px;
+}
+.textoBanner{
+    position: absolute;
+    width: 50%;
+    text-align: center;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    color: white;
+}
+.textoBanner h1{
+    font-family: 'Roboto Serif', bold;
+    font-size: 50px;
+}
+.textoBanner h5{
+    line-height: 30px;
+    font-weight: 100;
+    font-size: 18px;
+}
+/*=============================================
+MENU
+=============================================*/
+.menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .8);
+    overflow-x: hidden;
+    font-weight: 300;
+    display: none;
+    font-size: 34px;
+    line-height: 70px;
+}
+.btnClose{
+    position: absolute;
+    top: 100px;
+    right: 25%;
+    color: white;
+}
+.menu .nav{
+    margin-top: 10%;
+}
+/*=============================================
+GRID CATEGORIAS
+=============================================*/
+.grid figure{
+    position: relative;
+    border-top: 0px;
+    border-bottom: 0px;
+    border-left: 8px solid white;
+    border-right: 8px solid white;
+    cursor: pointer;
+    transition: 1s all;
+}
+.grid figure p:hover{
+    background: rgba(231, 169, 55, 0.9);
+}
+
+.grid .columna1{
+    width: 40%;
+}
+
+.grid .photo1{
+    height: 400px;
+    background: url(../img/edgerunners.jpg);
+    background-size: cover;
+    background-position: left;
+}
+.grid .photo2{
+    height: 300px;
+    background: url(../img/soulhackers.jpg);
+    background-size: cover;
+    background-position: left;
+}
+.grid .photo3{
+    height: 300px;
+    background: url(../img/remakes.jpg);
+    background-size: cover;
+    background-position: left;
+}
+.grid .photo4{
+    height: 300px;
+    background: url(../img/2023.jpg);
+    background-size: cover;
+    background-position: left;
+}
+.grid .photo5{
+    height: 400px;
+    background: url(../img/mhr-mhrs.png);
+    background-size: cover;
+    background-position: left;
+}
+.grid .photo6{
+    height: 200px;
+    background: url(../img/Vivek-thumbnail.jpg);
+    background-size: cover;
+    background-position: left;
+}
+.grid figure p{
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    font-weight: 100;
+    font-size: 20px;
+}
+/*=============================================
+BREADCRUMB
+=============================================*/
+.breadcrumb-item+.breadcrumb-item::before{
+    position: relative;
+    background: url(../img/separador.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    display: inline-block;
+    padding-right: .5rem;
+    color: #6c757d;
+    /*Cambiar imagen de la flechita*/
+    content: url(../img/espacio.png);
+    width: 60px;
+    left: -10px;
+    line-height: 50px;
+}
+.breadcrumb-item.inicio{
+    position: relative;
+    top: 13px;
+}
+/*=============================================
+CONTENIDO
+=============================================*/
+.contenidoInicio{
+    /*transform: translate(0%,-2%);*/
+}
+.introArticulo{
+    position: relative;
+}
+.fecha{
+    position: absolute;
+    right: 10px;
+    top: 0px;
+    padding: 5px 10px;
+    /*Tengo que buscar los colores del brief y ponerlos*/
+    color: #47B5FF;
+    font-size: 14px;
+    background: url(../img/globo.jpg);
+    background-size: cover;
+    background-position: center top;
+    height: 40px;
+}
+.fechaArticulo{
+    padding: 12px 32px;
+    color: #aaa;
+    font-size: 15px;
+    background: url(../img/globo.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 60px;
+}
+.page-item.active .page-link{
+    background: #47B5FF;
+    color: white;
+    border: 1px solid #bbb;
+}
+.page-link{
+    color: #06283D;
+}
+/*===============================
+GRIDFOOTER CATEGORIAS
+================================*/
+/*.gridFooter{
+    height: 300px;
+    overflow: hidden;
+}*/
+footer{
+    background: rgba(0, 0, 0, 1.0);
+}
+
+.gridFooter figure{
+    position: relative;
+    border-top: 4px solid white;
+    border-bottom: 4px solid white;
+    border-left: 4px solid white;
+    border-right: 4px solid white;
+    cursor: pointer;
+    transition:1s all;
+}
+
+.gridFooter figure p:hover{
+    background: rgba(231, 169, 55, 0.9);
+}
+
+.gridFooter .columna1{
+    width: 40%;
+}
+
+.gridFooter .photo1{
+    height: 200px;
+    background: url(../img/edgerunners.jpg);
+    background-size: cover;
+    background-position: left;
+}
+
+.gridFooter .photo2{
+    height: 100px;
+    background: url(../img/soulhackers.jpg);
+    background-size: cover;
+    background-position: left;
+}
+
+.gridFooter .photo3{
+    height: 100px;
+    background: url(../img/remakes.jpg);
+    background-size: cover;
+    background-position: left;
+}
+
+.gridFooter .photo4{
+    height: 100px;
+    background: url(../img/2023.jpg);
+    background-size: cover;
+    background-position: left;
+}
+
+.gridFooter .photo5{
+    height: 200px;
+    background: url(../img/mhr-mhrs.png);
+    background-size: cover;
+    background-position: left;
+}
+
+.gridFooter figure p{
+    position: absolute;
+    left: 0px;
+    bottom: -16px;
+    width: 100%;
+    background: rgba(0, 0, 0, .7);
+    color: white;
+    font-weight: 100;
+    font-size: 15px;
+}
+
+.gridFooter figure p:hover{
+    background: rgba(231, 169, 55, 0.9);
+}
+
+/*==============================================
+SCROLL UP
+==============================================*/
+#scrollUp{
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background: url(../img/flecha.jpg);
+}
+/*==================================
+PRELOAD
+====================================*/
+#preload{
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+    background: #FFF;
+}
+#porcentajeCarga{
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    color: white;
+    top: 52%;
+    font-size: 20px;
+    font-weight: 100;
+}
+#lineaCarga{
+    position: absolute;
+    width: 60%;
+    height: 2px;
+    top: 55%;
+    left: 20%;
+    right: 20%;
+    /*Cambiar al color de la pagina*/
+    background: #666;
+}
+#rellenoCarga{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2px;
+    width: 0%;
+    /*Cambiar al color de la pagina*/
+    background: #999;
+}
+#estadoCarga{
+    position: absolute;
+    background: url(../img/loader.gif);
+    background-position: center;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 50%;
+    height: 50%;
+}
+/*=============================================
+TABLET HORIZONTAL (LG revisamos en 1024px)
+=============================================*/
+@media (max-width: 1199px) and (min-width: 992px) {
+    .menu .nav {
+        margin-top: 15%;
+    }
+    .btnClose{
+        right: 15%;
+        top: 70px;
+    }
+    .fa-bars{
+        font-size: 25px;
+    }
+    .fade-slider {
+        height: 75px;
+    }
+    .fade-slider-Banner{
+    height: 250px;
+    }
+    .textoBanner h1{
+        font-size: 40px;
+    }
+    .textoBanner h5{
+        font-size: 17px;
+    }
+}
+/*=============================================
+TABLET VERTICAL (MD revisamos en 768px)
+=============================================*/
+@media (max-width: 991px) and (min-width: 768px) {
+    header .logotipo {
+        width: 18%;
+    }
+
+    .btnClose{
+        right: 15%;
+        top: 70px;
+    }
+
+    .fade-slider {
+        height: 89px;
+    }
+
+    .fade-slider-Banner{
+    height: 240px;
+    }
+
+    .textoBanner h1{
+        margin-top: 40px;
+        font-size: 30px;
+    }
+
+    .textoBanner h5{
+        font-size: 16px;
+    }
+
+    .fa-bars{
+        font-size: 25px;
+        margin-top: 5px;
+    }
+    .fa-search{
+        font-size: 20px;
+    }
+    .menu .nav{
+        margin-top: 20%;
+    }
+
+    .grid .photo1{
+        height: 300px;
+    }
+
+    .grid .photo2{
+        height: 200px;
+    }
+
+    .grid .photo3{
+        height: 200px;
+    }
+
+    .grid .photo4{
+        height: 200px;
+    }
+
+    .grid .photo5{
+        height: 300px;
+    }
+
+    .grid figure p{
+        font-size: 18px;
+    }
+
+    .fechaArticulo{
+        top: -8px;
+        left: 15px;
+        padding: 7px 18px;
+        font-size: 11px;
+        height: 40px;
+    }
+
+    .tituloArticulo{
+        font-size: 20px;
+    }
+    .gridFooter figure{
+    border-top: 2px;
+    border-bottom: 2px;
+    border-left: 2px solid white;
+    border-right: 2px solid white;
+    }
+
+    .gridFooter figure p{
+        font-size: 12px;
+    }
+    .breadcrumb-item+.breadcrumb-item::before{
+        width: 40px;
+        background-size: contain;
+    }
+    .breadcrumb-item.inicio, .breadcrumb-item.active{
+        font-size: 13px;
+    }
+}
+/*=============================================
+MÓVIL HORIZONTAL (SM revisamos en 576px)
+=============================================*/
+@media (max-width: 767px) and (min-width: 576px) {
+    header .logotipo {
+        width: 15%;
+    }
+
+    .fade-slider {
+        height: 77px;
+    }
+
+    .btnClose{
+        right: 15%;
+        top: 50px;
+    }
+
+    .fa-bars{
+        font-size: 30px;
+        margin-right: 10px;
+        margin-bottom: 12px;
+    }
+
+    .menu .nav{
+        margin-top: 25%;
+    }
+    .grid .columna1{
+        width: 50%;
+    }
+    .grid .photo1{
+        height: 200px;
+    }
+
+    .grid .photo2{
+        height: 200px;
+    }
+
+    .grid .photo3{
+        height: 200px;
+    }
+
+    .grid .photo4{
+        height: 200px;
+    }
+
+    .grid .photo5{
+        height: 200px;
+    }
+
+    .grid figure p{
+        font-size: 16px;
+    }
+
+    .breadcrumb-item+.breadcrumb-item::before{
+        width: 40px;
+        background-size: contain;
+    }
+
+    .breadcrumb-item.inicio,.breadcrumb-item, .breadcrumb-item.active{
+        font-size: 13px;
+    }
+
+    .fechaArticulo{
+        top: 1px;
+        left: 15px;
+        padding: 8px 13px;
+        font-size: 13px;
+        height: 40px;
+    }
+
+    .tituloArticulo{
+        font-size: 20px;
+    }
+
+    .btnCompartir .btn-group button, .btnCompartir .btn-group button span{
+        font-size: 14px;
+        padding: 6px;
+    }
+}
+/*=============================================
+MÓVIL VERTICAL (revisamos en 320px)
+=============================================*/
+@media (max-width: 575px) {
+    header .logotipo {
+        width: 25%;
+    }
+
+    .fade-slider {
+        height: 67px;
+    }
+    .btnClose{
+        right: 5%;
+        top: 10px;
+    }
+
+    .menu .nav{
+        margin-top: 25%;
+        font-size: 20px;
+        line-height: 40px;
+    }
+    .fa-bars{
+        font-size: 30px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+    .grid .columna1{
+        width: 50%;
+    }
+    .grid .photo1{
+        height: 120px;
+    }
+
+    .grid .photo2{
+        height: 120px;
+    }
+
+    .grid .photo3{
+        height: 120px;
+    }
+
+    .grid .photo4{
+       height: 120px;
+    }
+
+    .grid .photo5{
+       height: 120px;
+    }
+    .grid .photo6{
+       height: 120px;
+    }
+
+    .grid figure p{
+        font-size: 14px;
+    }
+
+    .breadcrumb-item+.breadcrumb-item::before{
+        width: 40px;
+        background-size: contain;
+    }
+
+    .breadcrumb-item.inicio, .breadcrumb-item.active{
+        font-size: 13px;
+    }
+
+    .breadArticulo{
+        display: none;
+    }
+    
+    .fecha{
+        font-size: 12px;
+        height: 32px;
+    }
+
+    .fechaArticulo{
+        top: 0px;
+        left: 15px;
+        padding: 6px 9px;
+        font-size: 10px;
+        height: 30px;
+    }
+
+    .tituloArticulo{
+        font-size: 18px;
+    }
+
+    .textoArticulo{
+        font-size: 14px;
+    }
+
+    .btnCompartir .btn-group button, .btnCompartir .btn-group button span{
+        font-size: 10px;
+        padding: 4px;
+    }
+}
