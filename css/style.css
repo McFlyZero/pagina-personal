@@ -13,8 +13,15 @@ a:visited, a:link, a:focus, a:hover, a:active{
     text-decoration:  none;
 }
 body{
-	background: #002B5B; 
+	background: #FFFFFF; 
 }
+
+/* COLORES
+#3E2A35 Morado oscuro
+#DF2A30 Rojo opaco
+#464E47 Ebony Gris oscuros
+#FAF0CA Lemon Meringue Blanco
+*/
 /*=============================================
 HEADER
 =============================================*/
@@ -26,7 +33,13 @@ header{
     background: rgba(255,255,255,.5);
 }
 header .logotipo{
-    width:12%;
+    width:75%;
+}
+.bannerLogo{
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 28px;
+    color: white;
+    margin-top: 10px;
 }
 .redes ul li i{
     width: 35px;
@@ -96,7 +109,6 @@ BANNER
     color: white;
 }
 .textoBanner h1{
-    font-family: 'Roboto Serif', bold;
     font-size: 50px;
 }
 .textoBanner h5{
@@ -131,72 +143,6 @@ MENU
     margin-top: 10%;
 }
 /*=============================================
-GRID CATEGORIAS
-=============================================*/
-.grid figure{
-    position: relative;
-    border-top: 0px;
-    border-bottom: 0px;
-    border-left: 8px solid white;
-    border-right: 8px solid white;
-    cursor: pointer;
-    transition: 1s all;
-}
-.grid figure p:hover{
-    background: rgba(231, 169, 55, 0.9);
-}
-
-.grid .columna1{
-    width: 40%;
-}
-
-.grid .photo1{
-    height: 400px;
-    background: url(../img/edgerunners.jpg);
-    background-size: cover;
-    background-position: left;
-}
-.grid .photo2{
-    height: 300px;
-    background: url(../img/soulhackers.jpg);
-    background-size: cover;
-    background-position: left;
-}
-.grid .photo3{
-    height: 300px;
-    background: url(../img/remakes.jpg);
-    background-size: cover;
-    background-position: left;
-}
-.grid .photo4{
-    height: 300px;
-    background: url(../img/2023.jpg);
-    background-size: cover;
-    background-position: left;
-}
-.grid .photo5{
-    height: 400px;
-    background: url(../img/mhr-mhrs.png);
-    background-size: cover;
-    background-position: left;
-}
-.grid .photo6{
-    height: 200px;
-    background: url(../img/Vivek-thumbnail.jpg);
-    background-size: cover;
-    background-position: left;
-}
-.grid figure p{
-    position: absolute;
-    left: 0px;
-    bottom: 0px;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.7);
-    color: white;
-    font-weight: 100;
-    font-size: 20px;
-}
-/*=============================================
 BREADCRUMB
 =============================================*/
 .breadcrumb-item+.breadcrumb-item::before{
@@ -220,9 +166,6 @@ BREADCRUMB
 /*=============================================
 CONTENIDO
 =============================================*/
-.contenidoInicio{
-    /*transform: translate(0%,-2%);*/
-}
 .introArticulo{
     position: relative;
 }
@@ -231,7 +174,6 @@ CONTENIDO
     right: 10px;
     top: 0px;
     padding: 5px 10px;
-    /*Tengo que buscar los colores del brief y ponerlos*/
     color: #47B5FF;
     font-size: 14px;
     background: url(../img/globo.jpg);
@@ -256,85 +198,6 @@ CONTENIDO
 .page-link{
     color: #06283D;
 }
-/*===============================
-GRIDFOOTER CATEGORIAS
-================================*/
-/*.gridFooter{
-    height: 300px;
-    overflow: hidden;
-}*/
-footer{
-    background: rgba(0, 0, 0, 1.0);
-}
-
-.gridFooter figure{
-    position: relative;
-    border-top: 4px solid white;
-    border-bottom: 4px solid white;
-    border-left: 4px solid white;
-    border-right: 4px solid white;
-    cursor: pointer;
-    transition:1s all;
-}
-
-.gridFooter figure p:hover{
-    background: rgba(231, 169, 55, 0.9);
-}
-
-.gridFooter .columna1{
-    width: 40%;
-}
-
-.gridFooter .photo1{
-    height: 200px;
-    background: url(../img/edgerunners.jpg);
-    background-size: cover;
-    background-position: left;
-}
-
-.gridFooter .photo2{
-    height: 100px;
-    background: url(../img/soulhackers.jpg);
-    background-size: cover;
-    background-position: left;
-}
-
-.gridFooter .photo3{
-    height: 100px;
-    background: url(../img/remakes.jpg);
-    background-size: cover;
-    background-position: left;
-}
-
-.gridFooter .photo4{
-    height: 100px;
-    background: url(../img/2023.jpg);
-    background-size: cover;
-    background-position: left;
-}
-
-.gridFooter .photo5{
-    height: 200px;
-    background: url(../img/mhr-mhrs.png);
-    background-size: cover;
-    background-position: left;
-}
-
-.gridFooter figure p{
-    position: absolute;
-    left: 0px;
-    bottom: -16px;
-    width: 100%;
-    background: rgba(0, 0, 0, .7);
-    color: white;
-    font-weight: 100;
-    font-size: 15px;
-}
-
-.gridFooter figure p:hover{
-    background: rgba(231, 169, 55, 0.9);
-}
-
 /*==============================================
 SCROLL UP
 ==============================================*/
@@ -353,7 +216,7 @@ PRELOAD
     z-index: 1000;
     width: 100%;
     height: 100%;
-    background: #FFF;
+    background: #FFFFFF;
 }
 #porcentajeCarga{
     position: absolute;
@@ -371,8 +234,7 @@ PRELOAD
     top: 55%;
     left: 20%;
     right: 20%;
-    /*Cambiar al color de la pagina*/
-    background: #666;
+    background: #464E47;
 }
 #rellenoCarga{
     position: absolute;
@@ -380,19 +242,24 @@ PRELOAD
     left: 0;
     height: 2px;
     width: 0%;
-    /*Cambiar al color de la pagina*/
-    background: #999;
+    background: #3E2A35;
 }
 #estadoCarga{
     position: absolute;
     background: url(../img/loader.gif);
     background-position: center;
-    top: 35%;
+    top: 28%;
     left: 50%;
     transform: translate(-50%,-50%);
     width: 50%;
     height: 50%;
 }
+/* COLORES
+#3E2A35 Morado oscuro
+#DF2A30 Rojo opaco
+#464E47 Ebony Gris oscuros
+#FAF0CA Lemon Meringue Blanco
+*/
 /*=============================================
 TABLET HORIZONTAL (LG revisamos en 1024px)
 =============================================*/

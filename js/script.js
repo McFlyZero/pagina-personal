@@ -24,12 +24,12 @@ $(window).scroll(function() {
 
 	if (posY > alturaBanner){
 		$("header").css({"background":"white"})
-		$("header .logotipo").css({"filter":"invert(100%)"})
-		$(".fa-bars, .fa-search").css({"filter":"invert(100%)"})
+		$("header .logotipo, .bannerLogo").css({"filter":"invert(100%)"})
+		$(".fa-github, .fa-whatsapp, .fa-twitter, .fa-linkedin, .fa-envelope, .fa-caret-down").css({"filter":"invert(100%)"})
 	}else{
 		$("header").css({"background":"rgba(0,0,0,.5)"})
-		$("header .logotipo").css({"filter":"invert(0%)"})
-		$(".fa-bars, .fa-search").css({"filter":"invert(0%)"})
+		$("header .logotipo, .bannerLogo").css({"filter":"invert(0%)"})
+		$(".fa-github, .fa-whatsapp, .fa-twitter, .fa-linkedin, .fa-envelope, .fa-caret-down").css({"filter":"invert(0%)"})
 	}
 });
 
