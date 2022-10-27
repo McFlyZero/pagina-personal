@@ -33,7 +33,7 @@ header{
     background: rgba(255,255,255,.5);
 }
 header .logotipo{
-    width:75%;
+    width:96%;
 }
 .bannerLogo{
     font-family: 'Chakra Petch', sans-serif;
@@ -81,6 +81,11 @@ header .buscymenu ul li i{
     transition: translate(-50%, 0%);
 }
 
+.titulo-form{
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 28px;
+    text-align: center;
+}
 /*===============================
 BANNER
 ================================*/
