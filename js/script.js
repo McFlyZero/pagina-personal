@@ -42,33 +42,9 @@ $(".fa-caret-down").click(function(){
 $(".btnClose").click(function(){
 	$(".menu").fadeOut("fast");
 })
-/*================================
-GRID CATEGORIAS
-================================*/
-$(".grid figure, .gridFooter figure").mouseover(function(){
-	$(this).css({"background-position":"right bottom"})
+$(".btnfadeout").click(function(){
+	$(".menu").fadeOut("fast");
 })
-
-$(".grid figure, .gridFooter figure").mouseout(function(){
-	$(this).css({"background-position":"left top"})
-})
-
-$(".grid figure, .gridFooter figure").click(function(){
-	var vinculo = $(this).attr("vinculo");
-	window.location = vinculo;
-})
-/*=============================================
-PAGINACIÓN
-=============================================*/
-$(".pagination").twbsPagination({
-	totalPages: 10,
-	visiblePages: 4,
-	first: "Primero",
-	last: "Último",
-	prev: '<i class="fas fa-angle-left"></i>',
-	next: '<i class="fas fa-angle-right"></i>'
-});
-
 /*==============================================
 SCROLLORAMA
 ==============================================*/
@@ -78,15 +54,6 @@ var controller = $.superscrollorama();
 controller.addTween(".contenidoInicio .container", TweenMax.from(
 		$(".contenidoInicio .container"), .5, {css:{opacity: 0}}
 ))
-/*==============================================
-SCROLLUP
-==============================================*/
-
-$.scrollUp({
-	scrollText: "",
-	scrollSpeed: 2000,
-	easingType: "easeOutQuint"
-})
 /*==============================================
 PRELOAD
 ==============================================*/

@@ -20,7 +20,8 @@ body{
 #3E2A35 Morado oscuro
 #DF2A30 Rojo opaco
 #464E47 Ebony Gris oscuros
-#FAF0CA Lemon Meringue Blanco
+#FFFFFF Blanco
+#FAF0CA
 */
 /*=============================================
 HEADER
@@ -30,7 +31,7 @@ header{
     top: 0;
     left: 0;
     z-index: 5;
-    background: rgba(255,255,255,.5);
+    background: rgba(255,255,255,0);
 }
 header .logotipo{
     width:96%;
@@ -41,19 +42,13 @@ header .logotipo{
     color: white;
     margin-top: 10px;
 }
-.redes ul li i{
-    width: 35px;
-    line-height: 35px;
-    text-align: center;
-    cursor: pointer;
-}
 header .redes ul li i{
     width: 35px;
     line-height: 35px;
     text-align: center;
     cursor: pointer;
 }
-header .buscymenu ul li i{
+.redes ul li i{
     width: 35px;
     line-height: 35px;
     text-align: center;
@@ -65,26 +60,12 @@ header .buscymenu ul li i{
     left: 50%;
     transform: translate(-50%,0%);
 }
-
-.fa-search{
-    color: white;
-}
-.fa-bars{
-    color: white;
-    font-size: 25px;
-}
 .redesMovil{
     position: fixed;
     bottom: -10px;
     left: 50%;
     z-index: 10;
     transition: translate(-50%, 0%);
-}
-
-.titulo-form{
-    font-family: 'Chakra Petch', sans-serif;
-    font-size: 28px;
-    text-align: center;
 }
 /*===============================
 BANNER
@@ -148,70 +129,28 @@ MENU
     margin-top: 10%;
 }
 /*=============================================
-BREADCRUMB
-=============================================*/
-.breadcrumb-item+.breadcrumb-item::before{
-    position: relative;
-    background: url(../img/separador.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    display: inline-block;
-    padding-right: .5rem;
-    color: #6c757d;
-    /*Cambiar imagen de la flechita*/
-    content: url(../img/espacio.png);
-    width: 60px;
-    left: -10px;
-    line-height: 50px;
-}
-.breadcrumb-item.inicio{
-    position: relative;
-    top: 13px;
-}
-/*=============================================
 CONTENIDO
 =============================================*/
-.introArticulo{
-    position: relative;
+.texto-titulo{
+    font-family: 'Chakra Petch', sans-serif;
 }
-.fecha{
-    position: absolute;
-    right: 10px;
-    top: 0px;
-    padding: 5px 10px;
-    color: #47B5FF;
-    font-size: 14px;
-    background: url(../img/globo.jpg);
-    background-size: cover;
-    background-position: center top;
-    height: 40px;
+.texto-cuerpo{
+    font-family: 'Rokkitt', serif;
 }
-.fechaArticulo{
-    padding: 12px 32px;
-    color: #aaa;
-    font-size: 15px;
-    background: url(../img/globo.jpg);
-    background-size: cover;
-    background-position: center;
-    height: 60px;
+
+.titulo-form{
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 28px;
+    text-align: left;
 }
-.page-item.active .page-link{
-    background: #47B5FF;
-    color: white;
-    border: 1px solid #bbb;
+.footerBG{
+    background-color:#464E47;
+    
+    color: #FFFFFF;
 }
-.page-link{
-    color: #06283D;
-}
-/*==============================================
-SCROLL UP
-==============================================*/
-#scrollUp{
-    bottom: 20px;
-    right: 20px;
-    width: 50px;
-    height: 50px;
-    background: url(../img/flecha.jpg);
+.txt-video{
+    font-size: 28px;
+    text-align: left;
 }
 /*==================================
 PRELOAD
