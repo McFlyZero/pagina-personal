@@ -5,7 +5,6 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Sobre mí: Arturo</title>
-  <!-- CAMBIAR FOTO ICONO TAB -->
   <link rel="icon" href="img/icono.png">
   <!-- PLUGINS DE CSS -->
   <!-- Latest compiled and minified CSS -->
@@ -45,16 +44,9 @@
   <script src="js/plugins/jquery.superscrollorama.js"></script>
   <script src="js/plugins/TweenMax.min.js"></script>
 
-  <!-- Scrollup -->
-  <script src="js/plugins/scrollUP.js"></script>
-  <script src="js/plugins/jquery.easing.js"></script>
-
-  <!-- Mapa API Google -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script>
-
   <!--==================================
-  PRELOAD
-  ====================================-->
+PRELOAD
+====================================-->
   <div id="preload">
 
     <div id="porcentajeCarga">0%</div>
@@ -79,11 +71,11 @@
 
         <a href="index.html">
 
-          <img src="img/mishi.png" alt="logo" class="img-fluid logotipo">
+          <img src="img/cb-logo.jpg" alt="logo" class="logotipo mt-sm-3 mt-md-3 mt-lg-2">
 
         </a>
       </div>
-      <div class="col-9 col-sm-10 col-md-7 col-lg-6 pt-1 pt-lg-2 px-xl-0">
+      <div class="col-7 col-sm-9 col-md-7 col-lg-6 pt-1 pt-lg-2 px-xl-0">
         <div class="bannerLogo">Arturo Sarrazin</div>
       </div>
       <!-- REDES SOCIALES -->
@@ -115,7 +107,7 @@
           <li>
 
           <li>
-            <a href="contacto.html" target="blank">
+            <a href="index.html#contacto" target="blank">
               <i class="fa-solid fa-envelope lead float-left rounded-circle text-white mr-1"> </i>
             </a>
           <li>
@@ -123,8 +115,7 @@
       </div>
 
       <!-- BOTON MENÚ -->
-      <div class="col-2 col-sm-1 col-md-2 col-lg-2 d-flex justify-content-end pt-2 mt-1">
-
+      <div class="col-2 col-sm-2 col-md-2 col-lg-2 d-flex justify-content-end pt-2 mt-1">
 
         <!-- Menu -->
         <div class="m-0 mt-sm-1 mt-md-0 mt-lg-1 pr-0 pr-sm-2 pr-lg-3 py-2">
@@ -170,7 +161,7 @@
       </li>
 
       <li>
-        <a href="contacto.html" target="blank">
+        <a href="index.html#contacto" target="blank">
           <i class="fa-solid fa-envelope lead float-left rounded-circle text-white mr-3 mr-sm-2">
           </i>
         </a>
@@ -215,7 +206,7 @@
         <a class="nav-link text-white btnfadeout" href="index.html#projects">Mis proyectos</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link text-white" href="contacto.html">Contacto</a>
+        <a class="nav-link text-white" href="index.html#contacto">Contacto</a>
       </li>
     </ul>
   </div>
@@ -224,7 +215,7 @@
   <!--=====================================
 CARRUSEL DE CATEGORIAS
 ======================================-->
-  <div class="container-fluid pt-3 d-flex justify-content-center">
+  <div class="container-fluid pt-3 d-flex justify-content-center m-0 carruselbg">
     <div id="demo" class="carousel slide" data-ride="carousel">
 
       <!-- Indicators -->
@@ -237,13 +228,13 @@ CARRUSEL DE CATEGORIAS
       <!-- The slideshow -->
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="img/img01.jpg" alt="Gatos" width="1200" height="550">
+          <img src="img/img01.jpg" alt="Gatos" width="1200" height="550" class="img-fluid">
         </div>
         <div class="carousel-item">
-          <img src="img/img02.jpg" alt="Monster Hunter" width="1200" height="550">
+          <img src="img/img02.jpg" alt="Monster Hunter" width="1200" height="550" class="img-fluid">
         </div>
         <div class="carousel-item">
-          <img src="img/img03.jpg" alt="Programación" width="1200" height="550">
+          <img src="img/img03.jpg" alt="Programación" width="1200" height="550" class="img-fluid">
         </div>
       </div>
     </div>
@@ -258,34 +249,87 @@ CARRUSEL DE CATEGORIAS
   <!--=====================================
 CONTENIDO BLOG
 ======================================-->
-  <div class="container-fluid bg-white contenidoInicio pb-4">
+  <div class="container-fluid bg-white pb-4">
     <div class="container">
       <!-- Sobre mí -->
       <div class="row">
         <div class="col-12 col-md-12 col-lg-12 p-0 pt-5" id="about-me">
 
-          <h1 class="py-3 texto-titulo">Sobre mí</h1>
+          <h1 class="py-5 texto-titulo titulobg">Sobre mí</h1>
 
-          <h4 class="texto-cuerpo"> Mi nombres es Arturo Sarrazin Quihuis, soy estudiante de ingeniería en sistemas de
-            información en la Universidad de Sonora.
-
+          <h4 class="texto-cuerpo"> Mi nombre es Arturo Sarrazin Quihuis, soy estudiante de ingeniería en sistemas de
+            información en la Universidad de Sonora. Tengo 24 años, lo que más me gusta es la programación,
+            especialmente el área de data science.
           </h4>
+
+          <p>&nbsp;</p>
+          <img src="img/img04.jpg" alt="Data science" class="img-fluid mx-auto d-block" width="50%">
+          <p>&nbsp;</p>
+
+          <h4 class="texto-cuerpo">
+            Me gustan mucho los gatos, adopté una, me regalaron otra y compré la última. También me apasionan los
+            videojuegos, mi saga favorita es Monster Hunter
+            y disfruto los FPS con mis amigos de vez en cuando.
+          </h4>
+
+          <p>&nbsp;</p>
+          <img src="img/img05.png" alt="Imagen Monster Hunter" class="img-fluid rounded mx-auto d-block" width="60%">
+          <p>&nbsp;</p>
+
         </div>
       </div>
       <!-- Mis skills -->
       <div class="row">
         <div class="col-12 col-md-12 col-lg-12 p-0 pt-5" id="skills">
-          <h1 class="py-3 texto-titulo">Mis skills</h1>
+          <h1 class="py-4 texto-titulo titulobg">Mis skills</h1>
+          <h4 class="texto-cuerpo">Durante mis 24 años he desarrollado y sigo desarrollando habilidades como lo son:
+          </h4>
 
-          <h4 class="texto-cuerpo">Hola </h4>
+          <div class="row">
+            <div class="col-4">
+              <dl class="texto-cuerpo">
+
+                <p>&nbsp;</p>
+
+                <dt><strong>Lenguajes de programación:</strong></dt>
+                <dd>- Python</dd>
+                <dd>- Java</dd>
+                <dd>- C#</dd>
+                <dd>- LÖVE</dd>
+
+                <p>&nbsp;</p>
+
+                <dt><strong>Softskills:</strong></dt>
+                <dd>- Pensamiento crítico</dd>
+                <dd>- Resolución de problemas</dd>
+                <dd>- Trabajo en equipo</dd>
+                <dd>- Liderazgo</dd>
+
+              </dl>
+            </div>
+
+            <div class="col-8">
+              <img src="img/img06.png" alt="Softskills" class="img-fluid rounded mx-auto d-block mt-5" width="80%">
+            </div>
+          </div>
+
         </div>
       </div>
+
+      <p>&nbsp;</p>
       <!-- Mis proyectos -->
       <div class="row">
         <div class="col-12 col-md-12 col-lg-12 p-0 pt-5" id="projects">
-          <h1 class="py-3 texto-titulo">Mis proyectos</h1>
+          <h1 class="py-4 texto-titulo titulobg">Mis proyectos</h1>
 
-          <h4 class="texto-cuerpo">Hola projectos</h4>
+          <h4 class="texto-cuerpo">Para la cuestión de mis proyectos realizados, me gustaría que pudiera pasar a ver
+            algunos de mis trabajos en mi perfil de Github.
+          </h4>
+          <a href="https://github.com/McFlyZero/" target="blank">
+            <img src="img/kiwi.png" alt="Arturo Quihuis dibujo" class="img-fluid mx-auto d-block img-proyectos">
+          </a>
+
+
         </div>
       </div>
 
@@ -297,38 +341,40 @@ CONTENIDO BLOG
   <!--=====================================
 FOOTER 
 ======================================-->
-  <footer class="container-fluid py-5 d-none d-md-block footerBG">
+  <footer class="container-fluid py-5 footerBG">
     <div class="container-fluid">
       <div class="row">
 
         <!-- VIDEO CANCION FAV -->
-        <div class="col-md-5 col-lg-4 pl-3">
-          <h5 class="texto-titulo txt-video">Mi canción favorita</h5>
+        <div class="d-none d-sm-block col-sm-12 col-md-12 col-lg-6 pl-3">
+
+          <h5 class="texto-titulo txt-video pb-2">Mi canción favorita</h5>
           <iframe width="540" height="300" src="https://www.youtube.com/embed/U7L-3VXAkSA"
             title="Cómo comer una vida - Eve MV" frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen></iframe>
+
         </div>
-        <div class="d-none d-lg-block col-lg-1 col-xl-2"></div>
+        <div class="d-none d-lg-block col-lg-1"></div>
 
         <!-- FORM CONTACTO -->
-        <div class="col-md-7 col-lg-7 col-xl-6 pt-5">
-          <h6 class="text-gray-dark titulo-form">Yo le contacto</h6>
+        <div class="col-7 col-sm-12 col-md-12 col-lg-5 pt-5" id="contacto">
+          <h6 class="text-gray-dark titulo-form">¡Yo te busco!</h6>
           <div class="input-group my-4">
 
             <input type="text" class="form-control" placeholder="Su nombre">
             <input type="text" class="form-control" placeholder="Ingrese su email">
 
             <div class="input-group-append">
-              <span class="input-group-text bg-dark text-white">¡Contáctame!</span>
+              <span class="input-group-text contactarbg text-dark">¡Contáctame!</span>
             </div>
 
           </div>
 
           <!-- REDES SOCIALES FOOTER-->
-          <div class="w-100 pt-2">
+          <div class="w-100 pt-2 d-none d-md-block">
 
-            <ul class="d-flex justify-content-end pt-0">
+            <ul class="d-flex justify-content-end pt-0 redesFooter">
 
               <li>
                 <a href="https://github.com/McFlyZero/" target="_blank">

@@ -17,11 +17,9 @@ body{
 }
 
 /* COLORES
-#3E2A35 Morado oscuro
-#DF2A30 Rojo opaco
-#464E47 Ebony Gris oscuros
+#1A1A1A Erie Black
 #FFFFFF Blanco
-#FAF0CA
+##FFCF56 Maiza Yellow
 */
 /*=============================================
 HEADER
@@ -34,7 +32,7 @@ header{
     background: rgba(255,255,255,0);
 }
 header .logotipo{
-    width:96%;
+    width: 45%;
 }
 .bannerLogo{
     font-family: 'Chakra Petch', sans-serif;
@@ -137,20 +135,38 @@ CONTENIDO
 .texto-cuerpo{
     font-family: 'Rokkitt', serif;
 }
-
+.img-proyectos{
+    height: 222px;
+    width: 219px;
+}
+.carruselbg{
+    background-color: #1A1A1A;
+}
+.titulobg{
+    background-color: #FFD670;
+}
+/*=============================================
+FOOTER
+=============================================*/
 .titulo-form{
     font-family: 'Chakra Petch', sans-serif;
     font-size: 28px;
     text-align: left;
+    color: #FFFFFF;
 }
 .footerBG{
-    background-color:#464E47;
-    
-    color: #FFFFFF;
+    background-color: #1A1A1A;
 }
 .txt-video{
     font-size: 28px;
     text-align: left;
+    color: #FFFFFF;
+}
+.contactarbg{
+    background-color: #FFD670;
+}
+.redesFooter ul li i{
+    background-color: #FFFFFF;
 }
 /*==================================
 PRELOAD
@@ -192,22 +208,20 @@ PRELOAD
     position: absolute;
     background: url(../img/loader.gif);
     background-position: center;
+    background-repeat: no-repeat;
     top: 28%;
     left: 50%;
     transform: translate(-50%,-50%);
     width: 50%;
     height: 50%;
 }
-/* COLORES
-#3E2A35 Morado oscuro
-#DF2A30 Rojo opaco
-#464E47 Ebony Gris oscuros
-#FAF0CA Lemon Meringue Blanco
-*/
 /*=============================================
 TABLET HORIZONTAL (LG revisamos en 1024px)
 =============================================*/
 @media (max-width: 1199px) and (min-width: 992px) {
+    header .logotipo {
+        width: 70%;
+    }
     .menu .nav {
         margin-top: 15%;
     }
@@ -236,7 +250,7 @@ TABLET VERTICAL (MD revisamos en 768px)
 =============================================*/
 @media (max-width: 991px) and (min-width: 768px) {
     header .logotipo {
-        width: 18%;
+        width: 95%;
     }
 
     .btnClose{
@@ -296,14 +310,6 @@ TABLET VERTICAL (MD revisamos en 768px)
         font-size: 18px;
     }
 
-    .fechaArticulo{
-        top: -8px;
-        left: 15px;
-        padding: 7px 18px;
-        font-size: 11px;
-        height: 40px;
-    }
-
     .tituloArticulo{
         font-size: 20px;
     }
@@ -317,20 +323,13 @@ TABLET VERTICAL (MD revisamos en 768px)
     .gridFooter figure p{
         font-size: 12px;
     }
-    .breadcrumb-item+.breadcrumb-item::before{
-        width: 40px;
-        background-size: contain;
-    }
-    .breadcrumb-item.inicio, .breadcrumb-item.active{
-        font-size: 13px;
-    }
 }
 /*=============================================
 MÓVIL HORIZONTAL (SM revisamos en 576px)
 =============================================*/
 @media (max-width: 767px) and (min-width: 576px) {
     header .logotipo {
-        width: 15%;
+        width: 150%;
     }
 
     .fade-slider {
@@ -409,7 +408,7 @@ MÓVIL VERTICAL (revisamos en 320px)
 =============================================*/
 @media (max-width: 575px) {
     header .logotipo {
-        width: 25%;
+        width: 100%;
     }
 
     .fade-slider {
